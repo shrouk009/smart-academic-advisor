@@ -1,0 +1,23 @@
+Graduation Requirements:
+A student must successfully complete all required courses and the minimum number of credit hours specified by the academic program before graduation.
+
+Course Registration:
+Students register courses according to their academic level, course prerequisites, and the maximum credit hours permitted by the university.
+
+Prerequisites:
+A prerequisite is a course that must be successfully completed before a student can register for another course that depends on it.
+
+Academic Warning:
+A student may receive an academic warning if the cumulative GPA falls below the minimum GPA required by the university.
+
+Semester GPA:
+The semester GPA is calculated by dividing the total quality points earned during the semester by the total registered credit hours.
+
+Cumulative GPA:
+The cumulative GPA represents the student's overall academic performance across all completed semesters.
+
+Credit Hours:
+Each academic course has a specific number of credit hours. Credit hours are used when calculating GPA and determining graduation requirements.
+
+Academic Advisor:
+The academic advisor helps students understand academic regulations, course requirements, prerequisites, GPA, and academic planning.

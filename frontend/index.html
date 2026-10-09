@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Smart Academic Advisor
+    </title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="ambient-bg">
+
+    <div class="cloud cloud-1"></div>
+
+    <div class="cloud cloud-2"></div>
+
+    <div class="cloud cloud-3"></div>
+
+
+    <div class="star-layer star-layer-1"></div>
+
+    <div class="star-layer star-layer-2"></div>
+
+
+    <div class="floating-pieces">
+
+        <span class="piece piece-1">
+            ♞
+        </span>
+
+        <span class="piece piece-2">
+            ♜
+        </span>
+
+        <span class="piece piece-3">
+            ♛
+        </span>
+
+        <span class="piece piece-4">
+            ♝
+        </span>
+
+    </div>
+
+</div>
+
+
+<div class="app-shell">
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================= -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-brand">
+
+            <div class="brand-mark">
+                S
+            </div>
+
+            <div class="brand-text">
+
+                <h2>
+                    Smart Advisor
+                </h2>
+
+                <span>
+                    Academic AI Platform
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-section-label">
+            WORKSPACE
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+
+            <button
+                class="nav-item active"
+                onclick="showPage('dashboard', this)"
+            >
+
+                <span class="nav-icon">
+                    ♔
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="showPage('pdf', this)"
+            >
+
+                <span class="nav-icon">
+                    ♜
+                </span>
+
+                <span>
+                    PDF Summarizer
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="showPage('chatbot', this)"
+            >
+
+                <span class="nav-icon">
+                    ♞
+                </span>
+
+                <span>
+                    Academic Chatbot
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="showPage('gpa', this)"
+            >
+
+                <span class="nav-icon">
+                    ♛
+                </span>
+
+                <span>
+                    GPA Calculator
+                </span>
+
+            </button>
+
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+
+            <div class="student-mini-profile">
+
+
+                <div
+                    class="student-avatar"
+                    id="studentAvatar"
+                >
+                    S
+                </div>
+
+
+                <div class="student-mini-text">
+
+                    <strong id="studentName">
+                        Student
+                    </strong>
+
+                    <span id="studentEmail">
+                        student@university.edu
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================= -->
+
+    <main class="main-area">
+
+
+        <header class="topbar">
+
+
+            <div class="topbar-left">
+
+                <div>
+
+                    <p class="eyebrow">
+                        STUDENT WORKSPACE
+                    </p>
+
+                    <h1 id="pageTitle">
+                        Dashboard
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+
+                <div class="search-box">
+
+                    <span>
+                        ⌕
+                    </span>
+
+                    <input
+                        type="text"
+                        placeholder="Search tools..."
+                    >
+
+                </div>
+
+
+                <button
+                    class="icon-button theme-toggle"
+                    onclick="toggleTheme()"
+                    id="themeToggle"
+                    title="Toggle theme"
+                >
+                    🌙
+                </button>
+
+
+                <div class="profile-chip">
+
+
+                    <div class="profile-chip-text">
+
+                        <strong id="topStudentName">
+                            Student
+                        </strong>
+
+                        <span id="topStudentEmail">
+                            student@university.edu
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="logout-button"
+                        onclick="logoutStudent()"
+                    >
+                        Logout
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =========================
+             DASHBOARD
+        ========================= -->
+
+        <section
+            id="dashboard"
+            class="page active-page"
+        >
+
+
+            <div class="hero-card">
+
+
+                <div class="hero-content">
+
+
+                    <span class="hero-badge">
+                        AI-POWERED ACADEMIC SUPPORT
+                    </span>
+
+
+                    <h2>
+
+                        Welcome back,
+
+                        <span id="heroStudentName">
+                            Student
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+                        Everything you need for smarter studying,
+                        academic guidance and GPA tracking —
+                        in one place.
+                    </p>
+
+
+                    <div class="hero-actions">
+
+
+                        <button
+                            class="hero-primary"
+                            onclick="openFeature('chatbot')"
+                        >
+                            Ask Academic Advisor
+                        </button>
+
+
+                        <button
+                            class="hero-secondary"
+                            onclick="openFeature('pdf')"
+                        >
+                            Summarize a PDF
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="ai-orb">
+
+                        <span>
+                            AI
+                        </span>
+
+                        <small>
+                            ♔ ♞ ♜
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <span class="stat-label">
+                        ACTIVE TOOLS
+                    </span>
+
+                    <strong>
+                        3
+                    </strong>
+
+                    <small>
+                        AI & academic utilities
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span class="stat-label">
+                        AI MODULES
+                    </span>
+
+                    <strong>
+                        2
+                    </strong>
+
+                    <small>
+                        Summarization + RAG
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span class="stat-label">
+                        PLATFORM
+                    </span>
+
+                    <strong>
+                        MVP
+                    </strong>
+
+                    <small>
+                        Ready for demonstration
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-kicker">
+                        QUICK ACCESS
+                    </span>
+
+                    <h3>
+                        Academic tools
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="tools-grid">
+
+
+                <article
+                    class="tool-tile"
+                    onclick="openFeature('pdf')"
+                >
+
+                    <div class="tool-icon blue">
+                        ♜
+                    </div>
+
+                    <div class="tool-tile-content">
+
+                        <h4>
+                            PDF Summarizer
+                        </h4>
+
+                        <p>
+                            Turn long academic documents
+                            into concise AI-generated summaries.
+                        </p>
+
+                    </div>
+
+                    <span class="tool-link">
+                        Open tool →
+                    </span>
+
+                </article>
+
+
+                <article
+                    class="tool-tile"
+                    onclick="openFeature('chatbot')"
+                >
+
+                    <div class="tool-icon violet">
+                        ♞
+                    </div>
+
+                    <div class="tool-tile-content">
+
+                        <h4>
+                            Academic Chatbot
+                        </h4>
+
+                        <p>
+                            Ask university or general questions
+                            using AI and your knowledge base.
+                        </p>
+
+                    </div>
+
+                    <span class="tool-link">
+                        Ask advisor →
+                    </span>
+
+                </article>
+
+
+                <article
+                    class="tool-tile"
+                    onclick="openFeature('gpa')"
+                >
+
+                    <div class="tool-icon cyan">
+                        ♛
+                    </div>
+
+                    <div class="tool-tile-content">
+
+                        <h4>
+                            GPA Calculator
+                        </h4>
+
+                        <p>
+                            Calculate your semester GPA
+                            and cumulative GPA instantly.
+                        </p>
+
+                    </div>
+
+                    <span class="tool-link">
+                        Calculate →
+                    </span>
+
+                </article>
+
+
+            </div>
+
+
+
+            <div class="dashboard-lower-grid">
+
+
+                <div class="panel-card">
+
+
+                    <span class="section-kicker">
+                        RECENT ACTIVITY
+                    </span>
+
+                    <h3>
+                        Your workspace
+                    </h3>
+
+
+                    <div class="activity-list">
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-dot blue-dot"></div>
+
+                            <div>
+
+                                <strong>
+                                    PDF Summarizer ready
+                                </strong>
+
+                                <span>
+                                    Upload a lecture and generate a summary.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-dot purple-dot"></div>
+
+                            <div>
+
+                                <strong>
+                                    Academic Chatbot online
+                                </strong>
+
+                                <span>
+                                    Ask university or general AI questions.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-dot cyan-dot"></div>
+
+                            <div>
+
+                                <strong>
+                                    GPA Calculator available
+                                </strong>
+
+                                <span>
+                                    Calculate SGPA and CGPA instantly.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="panel-card academic-card">
+
+
+                    <span class="section-kicker">
+                        ACADEMIC SNAPSHOT
+                    </span>
+
+
+                    <h3>
+                        Student support
+                    </h3>
+
+
+                    <div class="snapshot-box">
+
+                        <span>
+                            AI Status
+                        </span>
+
+                        <strong>
+                            All systems operational
+                        </strong>
+
+                    </div>
+
+
+                    <div class="snapshot-box">
+
+                        <span>
+                            Knowledge Base
+                        </span>
+
+                        <strong>
+                            Connected
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             PDF
+        ========================= -->
+
+        <section
+            id="pdf"
+            class="page"
+        >
+
+
+            <div class="page-header-block">
+
+
+                <span class="section-kicker">
+                    AI SUMMARIZATION
+                </span>
+
+
+                <h2>
+                    PDF Summarizer
+                </h2>
+
+
+                <p>
+                    Upload a lecture, article or academic
+                    document and generate an AI-powered summary.
+                </p>
+
+
+            </div>
+
+
+
+            <div class="workspace-card">
+
+
+                <div class="upload-zone">
+
+
+                    <div class="upload-icon">
+                        ♜
+                    </div>
+
+
+                    <h3>
+                        Upload your academic PDF
+                    </h3>
+
+
+                    <p>
+                        Select a PDF file to extract
+                        and summarize its content.
+                    </p>
+
+
+                    <input
+                        type="file"
+                        id="pdfFile"
+                        accept=".pdf"
+                    >
+
+
+                </div>
+
+
+                <button
+                    class="primary-action"
+                    onclick="summarizePDF()"
+                >
+                    Generate AI Summary
+                </button>
+
+
+
+                <div class="output-card">
+
+
+                    <div class="output-header">
+
+                        <span class="section-kicker">
+                            RESULT
+                        </span>
+
+                        <h3>
+                            AI Summary
+                        </h3>
+
+                    </div>
+
+
+                    <div
+                        id="pdfResult"
+                        class="output-content"
+                    >
+                        Your generated summary will appear here.
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             CHATBOT
+        ========================= -->
+
+        <!-- =========================
+     CHATBOT
+========================= -->
+
+<section
+    id="chatbot"
+    class="page"
+>
+
+    <div class="page-header-block">
+
+        <span class="section-kicker">
+            AI + RAG ASSISTANT
+        </span>
+
+        <h2>
+            Academic Chatbot
+        </h2>
+
+        <p>
+            Ask academic or general questions,
+            or attach a PDF and ask questions
+            directly about its content.
+        </p>
+
+    </div>
+
+
+    <div class="chat-shell">
+
+
+        <div class="chat-topbar">
+
+
+            <div class="chat-topbar-left">
+
+                <div class="advisor-avatar">
+                    ♞
+                </div>
+
+                <div>
+
+                    <strong>
+                        Academic Advisor
+                    </strong>
+
+                    <span>
+                        Online · AI + RAG + PDF
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="chat-session-controls">
+
+                <select
+                    id="chatSessionSelect"
+                    onchange="switchChatSession(this.value)"
+                    title="Saved conversations"
+                >
+
+                    <option value="">
+                        Saved Chats
+                    </option>
+
+                </select>
+
+
+                <button
+                    class="new-chat-button"
+                    onclick="clearChat()"
+                    type="button"
+                >
+                    ＋ New Chat
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+        <div
+            id="chatDocuments"
+            class="chat-documents-bar"
+        ></div>
+
+
+        <div
+            id="chatMessages"
+            class="chat-messages"
+        >
+
+            <div class="message-row bot-row">
+
+                <div class="message-avatar">
+                    ♞
+                </div>
+
+                <div class="message bot-message">
+                    Hello! I'm your academic advisor.
+                    Ask me anything or attach a PDF
+                    and ask questions about it.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="chat-composer">
+
+
+            <div class="chat-attachment-area">
+
+                <input
+                    type="file"
+                    id="chatPdfFile"
+                    accept=".pdf"
+                    hidden
+                    onchange="uploadChatPDF()"
+                >
+
+                <button
+                    type="button"
+                    class="chat-attach-button"
+                    onclick="document.getElementById('chatPdfFile').click()"
+                    title="Attach PDF"
+                >
+                    📎
+                </button>
+
+            </div>
+
+
+            <textarea
+                id="chatQuestion"
+                placeholder="Ask your question..."
+            ></textarea>
+
+
+            <button
+                onclick="askChatbot()"
+            >
+                Send
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+        <!-- =========================
+             GPA
+        ========================= -->
+
+        <section
+            id="gpa"
+            class="page"
+        >
+
+
+            <div class="page-header-block">
+
+
+                <span class="section-kicker">
+                    ACADEMIC PERFORMANCE
+                </span>
+
+
+                <h2>
+                    GPA Calculator
+                </h2>
+
+
+                <p>
+                    Add your courses, grades and credit
+                    hours to calculate SGPA and CGPA.
+                </p>
+
+
+            </div>
+
+
+
+            <div class="workspace-card">
+
+
+                <div class="gpa-section-title">
+
+                    <span class="section-kicker">
+                        CURRENT SEMESTER
+                    </span>
+
+                    <h3>
+                        Course grades
+                    </h3>
+
+                </div>
+
+
+
+                <div id="coursesContainer">
+
+
+                    <div class="course-row">
+
+
+                        <input
+                            type="text"
+                            placeholder="Course Name"
+                            class="course-name"
+                        >
+
+
+                        <select class="course-grade">
+
+                            <option value="A">A</option>
+                            <option value="A-">A-</option>
+
+                            <option value="B+">B+</option>
+                            <option value="B">B</option>
+                            <option value="B-">B-</option>
+
+                            <option value="C+">C+</option>
+                            <option value="C">C</option>
+                            <option value="C-">C-</option>
+
+                            <option value="D+">D+</option>
+                            <option value="D">D</option>
+
+                            <option value="F">F</option>
+
+                        </select>
+
+
+                        <input
+                            type="number"
+                            placeholder="Credit Hours"
+                            class="course-hours"
+                            min="1"
+                        >
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <button
+                    class="outline-action"
+                    onclick="addCourse()"
+                >
+                    + Add another course
+                </button>
+
+
+
+                <div class="divider"></div>
+
+
+
+                <div class="gpa-section-title">
+
+
+                    <span class="section-kicker">
+                        PREVIOUS RECORD
+                    </span>
+
+
+                    <h3>
+                        Cumulative data
+                    </h3>
+
+
+                </div>
+
+
+
+                <div class="two-columns">
+
+
+                    <input
+                        type="number"
+                        id="previousCgpa"
+                        placeholder="Previous CGPA"
+                        step="0.01"
+                        min="0"
+                        max="4"
+                    >
+
+
+                    <input
+                        type="number"
+                        id="previousHours"
+                        placeholder="Previous Credit Hours"
+                        min="0"
+                    >
+
+
+                </div>
+
+
+
+                <button
+                    class="primary-action"
+                    onclick="calculateGPA()"
+                >
+                    Calculate GPA
+                </button>
+
+
+
+                <div
+                    id="gpaResult"
+                    class="gpa-result-card"
+                >
+
+                    <span>
+                        RESULT
+                    </span>
+
+                    <strong>
+                        Your GPA result will appear here.
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

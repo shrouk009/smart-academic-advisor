@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login - Smart Academic Advisor</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="login.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="login-background">
+
+    <div class="login-cloud cloud-a"></div>
+    <div class="login-cloud cloud-b"></div>
+
+    <span class="login-piece piece-a">♞</span>
+    <span class="login-piece piece-b">♜</span>
+    <span class="login-piece piece-c">♛</span>
+
+</div>
+
+
+<div class="login-page">
+
+    <div class="login-left">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                S
+            </div>
+
+            <div>
+
+                <h2>
+                    Smart Academic Advisor
+                </h2>
+
+                <small>
+                    Academic AI Platform
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="intro">
+
+            <span>
+                AI-POWERED STUDENT SUPPORT
+            </span>
+
+            <h1>
+                Your Academic Journey,
+                Smarter.
+            </h1>
+
+            <p>
+                Summarize lectures,
+                ask academic questions,
+                and calculate your GPA
+                from one intelligent platform.
+            </p>
+
+
+            <div class="login-features">
+
+                <div>
+                    <strong>♜</strong>
+                    <span>AI PDF Summarization</span>
+                </div>
+
+                <div>
+                    <strong>♞</strong>
+                    <span>RAG Academic Advisor</span>
+                </div>
+
+                <div>
+                    <strong>♛</strong>
+                    <span>GPA Tracking</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="login-right">
+
+        <div class="login-card">
+
+            <span class="small-label">
+                STUDENT PORTAL
+            </span>
+
+            <h2>
+                Welcome Back
+            </h2>
+
+            <p>
+                Login using your university account.
+            </p>
+
+
+            <label>
+                Student Name
+            </label>
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter your full name"
+            >
+
+
+            <label>
+                University Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="student@university.edu"
+            >
+
+
+            <label>
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+            >
+
+
+            <button
+                onclick="loginStudent()"
+            >
+                Login to Workspace
+            </button>
+
+
+            <div
+                id="loginError"
+                class="error-message"
+            ></div>
+
+
+            <div class="demo-note">
+                MVP Demo Authentication
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="login.js"></script>
+
+</body>
+
+</html>
